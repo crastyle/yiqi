@@ -41,6 +41,12 @@ body {
     height: 100%;
     overflow-x: hidden;
   }
+  .fl {
+    float: left;
+  }
+  .fr {
+    float: right;
+  }
   body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article,
   aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     -webkit-tap-highlight-color: transparent;font-family: "Helvetica Neue",Helvetica,STHeiTi,sans-serif;}
@@ -133,7 +139,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    background: #f2f2f2;
+    background: #fff;
     color: #666;
     height: 100%;
   }

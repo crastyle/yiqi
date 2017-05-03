@@ -1,0 +1,12 @@
+@import "../../styles/app";
+.cartsPage {
+    .mint-checkbox-core.checked {
+        background-color: $activeColor;
+        border-color: $activeColor;
+        &:after {
+            border-color: #fff;
+            -webkit-transform: rotate(45deg) scale(1);
+            transform: rotate(45deg) scale(1);
+        }
+    }
+}
