@@ -1,5 +1,8 @@
 import product from '../../components/goods-item'
 import cart from '../../components/cart-large'
+
+const baseUrl = 'http://localhost:8080/static'
+
 export default {
   name: 'ProductList',
   data () {
@@ -7,7 +10,7 @@ export default {
       msg: 'Welcome to ProductList',
       data: [{
         id: 'asdasfq3ws',
-        img: '/src/static/Bitmap.png',
+        img: baseUrl + '/Bitmap.png',
         name: '我的文化？',
         sprice: 1300,
         num: 50,
@@ -15,7 +18,7 @@ export default {
         timer: 10
       }, {
         id: 'asdasfq3ws',
-        img: '/src/static/Bitmap.png',
+        img: baseUrl + '/Bitmap.png',
         name: '我的文化？',
         sprice: 1300,
         num: 50,
@@ -23,7 +26,7 @@ export default {
         timer: 10
       }, {
         id: 'asdasfq3ws',
-        img: '/src/static/Bitmap.png',
+        img: baseUrl + '/Bitmap.png',
         name: '我的文化？',
         sprice: 1300,
         num: 50,
