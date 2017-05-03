@@ -6,7 +6,7 @@
                     <span class="mint-checkbox-core"></span>
                 </div>
                 <div class="img-box">
-                    <img src="../../static/Bitmap.png" alt="">
+                    <img :src="$preStatic + '/Bitmap.png'" alt="">
                 </div>
                 <div class="cart-info">
                     <div class="name">冠成非洲花梨 三聚氰胺板 9mm厚芯单面</div>

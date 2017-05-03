@@ -13,16 +13,17 @@ import base from './base'
 import { bus } from './bus'
 
 import "vconsole"
+
 Vue.config.productionTip = false
 
+// 静态文件路径前缀
+Vue.prototype.$preStatic = 'http://localhost:8080/static'
+
 resource.interceports()
+
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App },
-  created() {
-    
-   
-  }
+  components: { App }
 })

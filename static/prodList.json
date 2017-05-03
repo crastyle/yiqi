@@ -1,0 +1,25 @@
+[{
+    "id": "asdasfq3ws",
+    "img": "/static/Bitmap.png",
+    "name": "我的文化？",
+    "sprice": 1300,
+    "num": 50,
+    "price": 100,
+    "timer": 10
+}, {
+    "id": "asdasfq3ws",
+    "img": "/static/Bitmap.png",
+    "name": "我的文化？",
+    "sprice": 1300,
+    "num": 50,
+    "price": 100,
+    "timer": 10
+}, {
+    "id": "asdasfq3ws",
+    "img": "/static/Bitmap.png",
+    "name": "我的文化？",
+    "sprice": 1300,
+    "num": 50,
+    "price": 1000000,
+    "timer": 10
+}]
