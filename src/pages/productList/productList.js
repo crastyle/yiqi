@@ -27,7 +27,7 @@ export default {
         name: '我的文化？',
         sprice: 1300,
         num: 50,
-        price: 100,
+        price: 1000000,
         timer: 10
       }]
     }
