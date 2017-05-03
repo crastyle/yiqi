@@ -11,9 +11,9 @@
 </script>
 
 <style>
-body {
-  background: #f5f5f5;
-}
+  body {
+    background: #f5f5f5;
+  }
 
   * {
     padding: 0;

@@ -7,6 +7,7 @@ import Carts from '../pages/carts/carts.vue'
 //@import
 Vue.use(Router)
 export default new Router({
+  mode: 'history',
   routes: [
     {path: '/',name: 'Product',component: Product},
     {path: '/productList',name: 'ProductList',component: ProductList},
