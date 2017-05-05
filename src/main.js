@@ -6,6 +6,7 @@ import router from './router'
 // rem
 import './flexble.js'
 // mint-ui
+import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import "./styles/reset-ui.scss"
 import resource from './resource'
@@ -15,6 +16,8 @@ import { bus } from './bus'
 import "vconsole"
 
 Vue.config.productionTip = false
+
+Vue.use(MintUI)
 
 // 静态文件路径前缀
 Vue.prototype.$preStatic = 'http://localhost:8080/static'

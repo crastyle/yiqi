@@ -27,6 +27,10 @@
 
 <template>
     <div class="productListPage">
+        <div class="header">
+            123 <br>
+        </div>
+        <select-sheet :tab-item="tabItem"></select-sheet>
         <product :data="prodList"></product>
         <div class="cart" @click="cartClick">
             <span>{{ 5 }}</span>
@@ -36,17 +40,28 @@
 
 <script>
     import product from '../../components/goods-item'
+    import SelectSheet from '../../components/SelectSheet'
 
     export default {
       name: 'ProductList',
       data () {
         return {
-          prodList: null
+          prodList: null,
+          sheetVisible: false,
+          tabItem: [{
+              title: 'aaa', options: ['a1', 'a2', 'a3']
+          },{
+              title: 'bbb', options: ['b1', 'b2', 'b3', 'b4']
+          },{
+              title: 'ccc', options: ['c1', 'c2', 'c3', 'c4', 'c5']
+          },{
+              title: 'ddd', options: ['d1', 'd2', 'd3', 'd4', 'd5', 'd6']
+          }]
         }
       },
       methods: {
         cartClick() {
-            console.log('xxx')
+            this.sheetVisible = true
         }
       },
       created() {
@@ -55,7 +70,8 @@
         })
       },
       components: {
-        product
+        product,
+        SelectSheet
       }
     }
 </script>
