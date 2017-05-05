@@ -1,7 +1,14 @@
 /**********************************/
 /*****    reset ui *********/
 
-
+.goodCell{
+	.mint-cell-label{display: inline;font-size: 14px;color: #b2b2b2;}
+	.mint-cell-wrapper{background-image: none;}
+} 
+.comment:last-child{
+	background-position: 10px bottom!important;
+	.mint-cell-label{font-size: 15px;}
+}
 
 
 /*****          end      ***********/
