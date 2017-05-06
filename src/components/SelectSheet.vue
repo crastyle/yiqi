@@ -1,77 +1,62 @@
 <style lang="scss" scoped>
-  .select-sheet {
-    font-size: .28rem;
-    position: relative;
-    .tab {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #e1e1e1;
-      .tab-item {
-        width: 100%;
-        height: .4rem;
-        line-height: .4rem;
-        margin: .2rem 0;
-        text-align: center;
-        color: #666;
-        &:nth-child(-n+3) {
-          border-right: 1px solid #e1e1e1;
-        }
-        span::after {
-          content: " ";
-          width: 4px;
-          height: 4px;
-          display: inline-block;
-          border: 1px solid transparent;
-          border-color: #666;
-          border-left: 0;
-          border-top: 0;
-          transform: translateY(-2px) rotate(45deg);
-          transition: transform .3s linear;
-        }
-        .active {
-          color: red;
-          &::after {
-            border-color: red;
-            transform: rotate(-135deg);
-          }
-        }
-      }
-    }
-    .options-warp {
+@import '../styles/app.scss';
+.select-sheet {
+  font-size: .28rem;
+  position: relative;
+  .tab {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1e1e1;
+    .tab-item {
       width: 100%;
-      background: #fff;
-      position: absolute;
-      top: .8rem;
-      .tab-options {
-        li {
-          height: .88rem;
-          line-height: .88rem;
-          padding-left: .42rem;
-          border-top: 1px solid #e1e1e1;
-        }
+      height: .4rem;
+      line-height: .4rem;
+      margin: .2rem 0;
+      text-align: center;
+      color: #666;
+      &:nth-child(-n+3) {
+        border-right: 1px solid #e1e1e1;
       }
-      .option-active {
-        color: red;
-        &::after {
-          content: " ";
-          width: 4px;
-          height: 8px;
-          float: right;
-          margin: .28rem .4rem 0 0;
-          border: 2px solid red;
-          border-left: 0;
-          border-top: 0;
-          transform: rotate(45deg);
-        }
+      span {
+        @extend .select-arrow;
       }
-    }
-    .mask {
-      position: absolute;
-      width: 100%;
-      background: #000;
-      opacity: .2;
     }
   }
+  .options-warp {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: .8rem;
+    .tab-options {
+      li {
+        height: .88rem;
+        line-height: .88rem;
+        padding-left: .42rem;
+        border-top: 1px solid #e1e1e1;
+      }
+    }
+    .option-active {
+      color: $activeColor;
+      &::after {
+        content: " ";
+        width: 4px;
+        height: 8px;
+        float: right;
+        margin: .28rem .4rem 0 0;
+        border: 2px solid $activeColor;
+        border-left: 0;
+        border-top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  .mask {
+    position: absolute;
+    width: 100%;
+    background: #000;
+    opacity: .2;
+  }
+}
 </style>
 
 <template>
@@ -84,18 +69,14 @@
         </span>
       </div>
     </div>
-    <div class="options-warp"  ref="options">
+    <div class="options-warp" ref="options">
       <ul class="tab-options">
-        <li v-for="(item, index) in activeOptions" :key="index"
-          @click="optionClick(item)"
-          :class="{'option-active': item === activeOptionsSelected.active}">
+        <li v-for="(item, index) in activeOptions" :key="index" @click="optionClick(item)" :class="{'option-active': item === activeOptionsSelected.active}">
           {{ item }}
         </li>
       </ul>
     </div>
-    <div v-if="activeOptions.length" class="mask"
-      :style="{'top': maskTop + 'px', 'height': maskHeight + 'px'}"
-      @click="closeOptions">
+    <div v-if="activeOptions.length" class="mask" :style="{'top': maskTop + 'px', 'height': maskHeight + 'px'}" @click="closeOptions">
     </div>
   </div>
 </template>
@@ -122,7 +103,7 @@ export default {
   computed: {
     // 展示的选项
     activeOptions() {
-      const activeTab =  this.tabItem.find(m => m.title === this.activeTabTitle)
+      const activeTab = this.tabItem.find(m => m.title === this.activeTabTitle)
       return activeTab ? activeTab.options : []
     },
     // 展示的选项里被选中的项

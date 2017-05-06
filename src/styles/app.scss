@@ -18,3 +18,25 @@ $assignColor: #ff8587;
     -webkit-line-clamp: $lineNum;
     -webkit-box-orient: vertical;
 }
+
+// @extend .select-arrow 下拉小箭头 (active击中)
+.select-arrow {
+  &::after {
+    content: " ";
+    width: 4px;
+    height: 4px;
+    display: inline-block;
+    border: 1px solid #666;
+    border-left: 0;
+    border-top: 0;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform .2s linear;
+  }
+  &.active {
+    color: $activeColor;
+    &::after {
+      border-color: $activeColor;
+      transform: rotate(-135deg);
+    }
+  }
+}
