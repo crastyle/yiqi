@@ -139,7 +139,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
-    background: #fff;
+    background: #f3f3f3;
     color: #666;
     height: 100%;
   }

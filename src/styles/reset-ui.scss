@@ -19,5 +19,31 @@
     color: #fff !important;
     border: #999 !important;
 }
+.mint-navbar {
+    border: 1px solid $activeColor;
+    border-radius: 8px;
+    overflow:  hidden;
+    
+    .mint-tab-item {
+        font-size: 13px;
+        padding: .17rem 0;
+        border-right: 1px solid $activeColor;
+        &:last-child {
+            border: none;
+        }
+        &.is-selected {
+            background: $activeColor;
+            color: #fff;
+            border: none;
+            margin: 0;
+            .mint-tab-item-label {
+                color: #fff;
+            }
+        }
+        .mint-tab-item-label {
+            color: $activeColor;
+        }
+    }
+}
 /*****          end      ***********/
 /***********************************/
