@@ -9,7 +9,7 @@
     border-bottom: 1px solid #e1e1e1;
     .title {
       @extend .select-arrow;
-      line-height: .88rem; // 修正
+      // 修正
       &::after {
         width: 6px;
         height: 6px;
@@ -19,6 +19,10 @@
       &.active {
         color: #666;
       }
+    }
+    span {
+      line-height: .88rem;
+      padding: 0 .28rem;
     }
   }
   .type-list {
@@ -58,10 +62,12 @@
   <div class="productListPage">
     <div class="header-warp">
       <div class="header">
-        <span class="fl">后退</span>
-        <span class="fr">搜索</span>
+        <template v-if="!typeListShow">
+          <span class="fl mintui mintui-back"></span>
+          <span class="fr mintui mintui-search"></span>
+        </template>
         <span @click="titleClick" :class="['title', {'active': typeListShow}]">
-          {{ '商品分类' }}
+          {{'商品分类'}}
         </span>
       </div>
       <div v-show="typeListShow" class="type-list">
