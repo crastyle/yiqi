@@ -114,7 +114,11 @@ export default {
     optionClick(target) {
       this.activeOptionsSelected.active = target
       // this.closeOptions()
-      this.$emit('change', this.selectState)
+      this.$emit('change', {
+        targetOption: target,
+        targetTabTitle: this.activeTabTitle,
+        tabsState: this.selectState
+      })
     },
     closeOptions() {
       this.activeTabTitle = '' // 收起选项列表
