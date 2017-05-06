@@ -65,7 +65,11 @@
         },
         selectChange(rs) {
             // 筛选结果
-            console.log(rs)
+            console.log(
+                rs.targetOption, // 击中项
+                rs.targetTabTitle, // 击中项所属的 tab 类
+                rs.tabsState // 所有 tab 状态
+            )
         }
       },
       created() {
