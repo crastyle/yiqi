@@ -1,0 +1,44 @@
+@import "../../styles/app";
+.integerRecordPage {
+    .ion-tab {
+        padding: .17rem .2rem;
+        background: #fff;
+    }
+    .container-title {
+        height: .6rem;
+        font-size: .24rem;
+        background: #f3f3f3;
+        padding: 0 .24rem;
+        line-height: .6rem;
+        span {
+            float: right;
+        }
+    }
+    ul.list {
+        li {
+            height: 1.32rem;
+            box-sizing: border-box;
+            padding: .36rem .24rem;
+            border-bottom: 1px solid #e2e2e2;
+            background: #fff;
+            &:last-child {
+                border: none;
+            }
+            .name {
+                font-size: .32rem;
+                color: #000;
+                span {
+                    float: right;
+                    color: $activeColor;
+                }
+            }
+            .info {
+                font-size: .24rem;
+                color: #999;
+                span {
+                    float: right;
+                }
+            }
+        }
+    }
+}
