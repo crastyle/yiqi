@@ -1,5 +1,8 @@
 <style lang="scss" scoped>
     @import '../../styles/app.scss';
+    .header {
+        border-bottom: 1px solid #e1e1e1;
+    }
     .cart {
         width: 1.04rem;
         height: 1.02rem;
@@ -28,7 +31,7 @@
 <template>
     <div class="productListPage">
         <div class="header">
-            123 <br>
+            header <br>
         </div>
         <select-sheet :tab-item="tabItem" @change="selectChange"></select-sheet>
         <product :data="prodList"></product>
@@ -49,13 +52,13 @@
           prodList: null,
           sheetVisible: false,
           tabItem: [{
-              title: 'aaa', options: ['全部', 'a1', 'a2', 'a3']
+              title: '品牌', options: ['全部', '品牌1', '品牌2', '品牌3']
           },{
-              title: 'bbb', options: ['全部', 'b1', 'b2', 'b3', 'b4']
+              title: '专区', options: ['全部', '专区1', '专区2', '专区3', '专区4']
           },{
-              title: 'ccc', options: ['全部', 'c1', 'c2', 'c3', 'c4', 'c5']
+              title: '排序', options: ['全部', '排序1', '排序2', '排序3', '排序4', '排序5']
           },{
-              title: 'ddd', options: ['全部', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6']
+              title: '筛选', options: ['全部', '筛选1', '筛选2', '筛选3', '筛选4', '筛选5', '筛选6']
           }]
         }
       },
