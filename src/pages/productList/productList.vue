@@ -30,7 +30,7 @@
         <div class="header">
             123 <br>
         </div>
-        <select-sheet :tab-item="tabItem"></select-sheet>
+        <select-sheet :tab-item="tabItem" @change="selectChange"></select-sheet>
         <product :data="prodList"></product>
         <div class="cart" @click="cartClick">
             <span>{{ 5 }}</span>
@@ -49,19 +49,23 @@
           prodList: null,
           sheetVisible: false,
           tabItem: [{
-              title: 'aaa', options: ['a1', 'a2', 'a3']
+              title: 'aaa', options: ['全部', 'a1', 'a2', 'a3']
           },{
-              title: 'bbb', options: ['b1', 'b2', 'b3', 'b4']
+              title: 'bbb', options: ['全部', 'b1', 'b2', 'b3', 'b4']
           },{
-              title: 'ccc', options: ['c1', 'c2', 'c3', 'c4', 'c5']
+              title: 'ccc', options: ['全部', 'c1', 'c2', 'c3', 'c4', 'c5']
           },{
-              title: 'ddd', options: ['d1', 'd2', 'd3', 'd4', 'd5', 'd6']
+              title: 'ddd', options: ['全部', 'd1', 'd2', 'd3', 'd4', 'd5', 'd6']
           }]
         }
       },
       methods: {
         cartClick() {
             this.sheetVisible = true
+        },
+        selectChange(rs) {
+            // 筛选结果
+            console.log(rs)
         }
       },
       created() {
